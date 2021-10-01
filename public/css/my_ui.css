@@ -1,0 +1,13 @@
+
+.accordion{width:80%; margin:0 auto;}
+.accordion>.title{
+    background:#eee; border:1px soild #aaa;
+    padding:6px; font-size:1.5em; 
+    font-weight:bold; cursor:pointer;
+}
+.accordion>.fade{
+    display: none;
+}
+.accordion>.in{
+    display: block;
+}

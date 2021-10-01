@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>discount</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <header id="my-header">
+    </header>
+
+    
+    <ul class="step2">
+        <li class="active2">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="strip"></li>
+    </ul>
+
+
+    <table class="table" style="max-width: 1400px">
+        <thead>
+            <tr>
+                <th>商品資料</th>
+                <th>單件價格</th>
+                <th>數量</th>
+                <th>小計</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-title="商品資料">
+                    <span><img src="img/coming-game1.jpg"></span>
+                    <span>DEATH STRANDING DIRECTOR'S CUT</span>
+                </td>
+                <td>NT$1,490</td>
+                <td data-title="數量"><button>-</button><span>1</span><button>+</button></td>
+                <td data-title="小計">NT$1,490</td>
+                <td><button>X</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="row mx-auto" style="max-width: 1400px">
+        <div class="col-sm-7 col-md-8 px-4 py-3">
+            <div class="order-form">
+                <div class="section-header">
+                    <h3>選擇送貨及付款方式</h3>
+                </div>
+                <div class="section-body bg-secondary bg-gradient bg-opacity-25 px-2 py-4">
+                    <div class="form-group">
+                        <label for="">送貨地點</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>新北市</option>
+                            <option value="1">台北市</option>
+                            <option value="2">基隆</option>
+                            <option value="3">桃園</option>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">送貨方式</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>宅配</option>
+                            <option value="1">711貨到付款</option>
+                            <option value="2">711取貨(取貨不付款)</option>
+                            <option value="3">全家取貨(取貨不付款)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">付款方式</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>貨到付款</option>
+                            <option value="1">銀行轉帳</option>
+                            <option value="2">線上刷卡</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 col-md-4 px-4 py-4">
+            <div class="order-summary">
+                <div class="section-header">
+                    <h3>訂單資訊</h3>
+                </div>
+                <div class="section-body bg-secondary bg-gradient bg-opacity-25 px-2 py-4">
+                    <div class="checkout-cart-summary">
+                        <div class="subtotal">
+                            <span class="pull-left">小計:</span>
+                            <span class="pull-right">NT$1,490</span>
+                        </div>
+                        <div class="discount">
+                            <span class="pull-left">折扣:</span>
+                            <span class="pull-right">NT$0</span>
+                        </div>
+                        <div class="delivery">
+                            <span class="pull-left">運費:</span>
+                            <span class="pull-right">NT$60</span>
+                        </div>
+                        <hr class="scope">
+                        <div class="total">
+                            <span class="pull-left">合計:</span>
+                            <span class="pull-right">NT$1,490</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-checkout" href="">前往結帳</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel-body">
+        <p>一般等候7-14工作天（不含例假日）
+        <br>遇缺貨等候14-21工作天（不含例假日）
+        <br>
+        <br>本賣場提供退款服務        
+        <br>如果您在本賣場購物後改變心意，可以在交易日期之後14天內，要求退款到您提供的帳戶，前提是您必須尚未開始下載或串流購買的商品。
+        <br>請與我們的客戶服務中心聯絡以申請退款，並提供以下資料給客服人員：
+        <br>1. 欲退款之帳戶
+        <br>2. 欲退款的購買品項名稱
+        <br>3. 申請退款原因
+        <br>
+        <br>我們會儘快處理您的退款，不過確認要求最多可能會需要72小時。
+        </p>
+    </div>
+
+    <footer id="footer">
+    </footer>
+
+
+
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+
+span{
+    text-decoration: line-through;
+}
+.card a{
+    border: 3px solid transparent;
+}
+.card a:hover{
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    border: 3px solid #185ADB;
+}

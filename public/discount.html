@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>discount</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+
+        .whirl{
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+            padding: 100px 0;
+        }
+        .whirl li{
+            list-style: none;
+            width: 240px;
+            height: 240px;
+            text-align: center;
+            /*outline: 3px solid #022e57;*/
+            line-height: 240px;
+            position: relative;
+            z-index: 1;
+            font-size: 28px;
+            border-radius: 20px;
+            margin: 20px auto;
+        }
+        .whirl a:hover {
+            color: #fff5fd;
+        }
+        .whirl li:hover{
+            background-color: #231e23;
+        }
+        .whirl a{
+            text-decoration: none;
+            color: #231e23;
+            margin: 20px auto;
+        }
+        .box1{background-color: #39a6a3;}
+        .box2{background-color: #bf1363;}
+        .box3{background-color: #ac66cc;}
+
+        @media screen and (min-width: 768px){
+            .whirl{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .whirl li{
+                width: 300px;
+                height: 300px;
+                line-height: 300px;
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header id="my-header">
+    </header>
+
+    <ul class="whirl">
+        <a href="hot-deals.html"><li class="box1">熱門優惠</li></a>
+        <a href="percent.html"><li class="box2">折扣優惠</li></a>
+        <a href="week.html"><li class="box3">本週精選優惠</li></a>
+    </ul>
+    
+
+
+
+    <footer id="footer">
+    </footer>
+
+
+
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>
