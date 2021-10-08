@@ -5,11 +5,10 @@
     overflow: hidden;
 }
 .support .container{
-    margin: auto;
+    margin: 100px auto;
     display: flex;  
     position: relative;
     justify-content: center;
-    line-height: 400px;
 }
 .support .container h1{
     width: 100%;
@@ -31,48 +30,43 @@
     padding: 10px;
     position: relative;
     z-index: 1;
+    text-align: center;
+}
+.support h2{
+    font-size: 48px;
 }
 .support .container p{
-    margin-bottom: 1.1em;
-    font-size: 28px;
+    font-size: 24px;
 }
- /*  .support .txt p:first-child:first-letter{
-    font-size: 48px;
-    float: left;
-    margin-right: 10px;
-  } */
 
-
-.how-to{
-    padding: 50px 20px; 
+.what, .start{
+    background-color: #fff;
+    margin: 50px 20px;
 }
-.how-to .txt{
-    margin: 50px 0;
+.choose, .how-to, .set-remote, .how-cancel{
+    background-color: #C9CCD5;   
 }
-.credit{
-    background-color: #e4e0e0;
+.choose .txt, .how-to .txt, .restrict .txt,.set-remote .txt, .examination .txt, .how-preorder .txt, .how-cancel .txt, .bill .txt{
     padding: 50px 20px;
 }
-.credit .txt{
-    margin: 50px 0;
+.choose ul, .start ul li, .how-to ul li, .restrict li, .set-remote li, .examination li{
+    margin: 20px 0;
 }
 
-@media screen and (min-width: 768px){
-    .how-to{
-        display: flex;
-        justify-content: center;
-    }
-    .how-to .txt{
-        margin: 50px 30px;
-    }
-    .credit{
-        display: flex;
-        justify-content: center;
-    }
-    .credit .txt{
-        margin: 50px;
-    }
-    .support .txt p{
-        font-size: 40px;
+.remote, .pre-order{
+    background-color: #3D56B2;
+    width: 100%;
+    margin: auto;
+    padding: 50px 0;
+}
+.remote .txt, .pre-order .txt{
+    text-align: center;
+    color: #fff;
+}
+
+
+@media screen and (min-width: 768px) {
+    .what .txt, .choose .txt, .how-to .txt, .restrict .txt,.set-remote .txt, .examination .txt, .how-preorder .txt, .how-cancel .txt, .bill .txt, .start .txt{
+        padding: 50px 100px;
     }
 }

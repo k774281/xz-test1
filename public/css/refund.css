@@ -1,0 +1,85 @@
+.support{
+    width: 100%;
+    height: 400px;
+    box-shadow: 0 0 15px #a7bbc7;
+    overflow: hidden;
+}
+.support .container{
+    margin: auto;
+    display: flex;  
+    position: relative;
+    justify-content: center;
+    line-height: 400px;
+}
+.support .container h1{
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin-left: 15px;
+    color: #fff;
+    position: absolute;
+    font-size: 250px;
+    top: -40px;
+    left: 0;
+    line-height: 0.8em;
+    opacity: 0.6;
+    text-shadow: 15px 6px 0 #aaa;
+}
+.support  .txt{
+    box-sizing: border-box;
+    flex-shrink: 0;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+.support .container p{
+    margin-bottom: 1.1em;
+    font-size: 28px;
+}
+ /*  .support .txt p:first-child:first-letter{
+    font-size: 48px;
+    float: left;
+    margin-right: 10px;
+  } */
+
+
+.how-to{
+    padding: 50px 20px; 
+}
+.how-to .txt{
+    margin: 50px 0;
+}
+.credit{
+    background-color: #e4e0e0;
+    padding: 50px 20px;
+}
+.credit .txt{
+    margin: 50px 0;
+}
+
+
+.how-refund{
+    padding: 100px 20px;
+}
+@media screen and (min-width: 768px){
+    .how-to{
+        display: flex;
+        justify-content: center;
+    }
+    .how-to .txt{
+        margin: 50px 30px;
+    }
+    .credit{
+        display: flex;
+        justify-content: center;
+    }
+    .credit .txt{
+        margin: 50px;
+    }
+    .support .txt p{
+        font-size: 40px;
+    }
+    .how-refund{
+        padding: 100px;
+    }
+}
