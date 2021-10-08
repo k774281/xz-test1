@@ -123,7 +123,7 @@ h3{
     background-color: #a6d6d6;
     background: linear-gradient(90deg, #a6d6d6 60%, transparent 100%)
     ,
-    url(/img/new-hot.jpg) right center/ auto 100% ;
+    url(img/new-hot.jpg) right center/ auto 100% ;
 }
 .new-hot .container{
     margin: 50px 0 0 0;
@@ -199,7 +199,7 @@ h3{
 .pre-order{
     background: linear-gradient(90deg, #2B2B2B 30%, transparent 100%)
     ,
-    url(/img/pre-order.jpg) right center/ auto 100% ;
+    url(img/pre-order.jpg) right center/ auto 100% ;
 }
 .pre-order .txt{
     color: #EDEDED;

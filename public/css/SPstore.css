@@ -35,7 +35,7 @@ h3{
 /* 訂閱 */
 .new-hot{
     background: linear-gradient(10deg, #595260 3%, transparent 100%),
-    url(/img/member.jpg) right center/auto 100%;
+    url(img/member.jpg) right center/auto 100%;
 }
 
 .new-hot .container{
@@ -141,7 +141,7 @@ h3{
 
 .featured{
     background: linear-gradient(10deg, #EDEDED 3%, transparent 100%),
-    url(/img/featured.jpg) right center/auto 100%;
+    url(img/featured.jpg) right center/auto 100%;
 }
 .featured .txt{
     text-align: center;

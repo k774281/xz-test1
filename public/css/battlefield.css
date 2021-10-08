@@ -5,7 +5,7 @@ body{
     width: 100%;
     height: 400px;
     background: 
-    url(/img/battlefield01.jpg) no-repeat center top/ auto 100%;
+    url(img/battlefield01.jpg) no-repeat center top/ auto 100%;
     background-size: cover ;
 }
 .banner .container{
