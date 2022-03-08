@@ -6,7 +6,7 @@ const pool=require("../pool")
 //服务端接口地址http://localhost:3000/details
 //客户端请求时:
 //http://localhost:3000/details?lid=1
-router.get("/",(req,res)=>{
+/* router.get("/",(req,res)=>{
   var lid=req.query.lid;
   var output={
     product:{},
@@ -38,5 +38,17 @@ router.get("/",(req,res)=>{
     res.send(output);
   }
 })
+ 
+*/
 
+router.get('/details',function(req,res){
+  var gid=req.query.gid;
+  var sql="select gd.*, gp.lg from game_detail gd inner join game_pic gp on gd.gid=gp.game_id WHERE gd.gid=?";
+  
+  pool.query(sql,[gid],(err,result)=>{
+    if(err) console.log(err);
+    res.send(result);
+  });
+
+});
 module.exports=router;
