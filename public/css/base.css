@@ -8,3 +8,16 @@ html,body{
   font-family: 'Noto Sans TC', sans-serif;
   font-family: 'Mate SC', serif;
 }
+html{
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;  
+  background: transparent;  
+}
+body{
+  background:linear-gradient(-50deg,#950101 -100% ,#040303);
+  background-attachment:fixed;
+  height:100vh;
+}

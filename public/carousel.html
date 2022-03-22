@@ -1,17 +1,79 @@
-<ul class="ul-imgs">
-  <li><a href="javascript:;"><img src="img/banner1.jpg"></a></li>
-  <li><a href="javascript:;"><img src="img/banner2.jpg"></a></li>
-  <li><a href="javascript:;"><img src="img/banner3.jpg"></a></li>
-  <li><a href="javascript:;"><img src="img/banner4.jpg"></a></li>
-  <li><a href="javascript:;"><img src="img/banner5.jpg"></a></li>
-</ul>
-<ul class="ul-idxs">
-  <li><a href="javascript:;"><img src="img/minibanner1.jpg"></a></li>
-  <li><a href="javascript:;"><img src="img/minibanner2.jpg"></a></li>
-  <li><a href="javascript:;"><img src="img/minibanner3.jpg"></a></li>
-  <li><a href="javascript:;"><img src="img/minibanner4.jpg"></a></li>
-  <li><a href="javascript:;"><img src="img/minibanner5.jpg"></a></li>
-</ul>
+
+
+
+<div id="wrapper">
+  <div class="slider-for">
+    <div class="relative">
+      <img src="img/banner1.jpg">
+      <div class="absolute">
+        <div class="box">
+        <h2>暗黑破壞神®II：獄火重生™</h2>        
+        <p>《暗黑破壞神®II：獄火重生™》是暴雪娛樂旗下定義動作類角色扮演系列指標性作品《暗黑破壞神®II》和其資料片「毀滅之王」的終極重製版。 </p>
+        </div><!--box end-->
+      </div><!--absolute end-->
+    </div><!--relative end-->
+    
+    <div>
+      <div class="relative">
+      <img src="img/banner2.jpg">
+        <div class="absolute">
+          <div class="box">
+            <h2>Daredevil</h2>
+            
+            <p>Blinded as a young boy, Matt Murdock fights injustice by day as a lawyer and by night as the Super Hero Daredevil in Hell's Kitchen, New York City.</p>
+          </div><!--box end-->
+        </div><!--absolute end-->
+      </div><!--relative end-->
+    </div>
+    
+    <div>
+      <div class="relative">
+        <img src="img/banner3.jpg">
+        <div class="absolute">
+          <div class="box">
+            <h2>Breaking Bad</h2>
+            <p>A high school chemistry teacher dying of cancer teams with a former student to manufacture and sell crystal meth to secure his family's future.</p>
+          </div><!--box end-->
+        </div><!--absolute end-->
+      </div><!--relative end-->
+    </div>
+    <div>
+      <div class="relative">
+        <img src="img/banner4.jpg">
+        <div class="absolute">
+          <div class="box">
+            <h2>House of Cards</h2>
+            <p>A ruthless politician will stop at nothing to conquer Washington, D.C., in this Emmy and Golden Globe-winning political drama.</p>
+          </div><!--box end-->
+        </div><!--absolute end-->
+      </div><!--relative end-->
+    </div>
+    <div>
+      <div class="relative">
+        <img src="img/banner5.jpg">
+        <div class="absolute">
+          <div class="box">
+            <h2>Narcos</h2>
+            <p>The true story of Columbia's infamously violent and powerful drug cartels fuels this gritty new gangster drama series.</p>
+          </div><!--box end-->
+        </div><!--absolute end-->
+      </div><!--relative end-->
+    </div>
+    
+  </div><!--slider-for end-->
+  <div class="slider-nav">
+    <img class="nav-img" src="img/banner1.jpg">
+    
+    <img class="nav-img" src="img/banner2.jpg">
+    
+    <img class="nav-img" src="img/banner3.jpg">
+    
+    <img class="nav-img" src="img/banner4.jpg">
+    
+    <img class="nav-img" src="img/banner5.jpg">
+    
+  </div><!--slider-nav end-->  
+</div><!--wrapper end-->
 
 <script type="text/javascript" src="js/jquery-migrate-3.3.2.min.js"></script>
 <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
@@ -19,50 +81,24 @@
 
 
 <script type="text/javascript">
-  $(document).ready(function(){
-    $('.ul-imgs').slick({
-      slidesToShow: 1,
 
-      
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      arrows: false,
-      fade: true,
-      asNavFor: '.ul-idxs',
-    });
-    $('.ul-idxs').slick({
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      asNavFor: '.ul-imgs',
-      dots: true,
-      centerMode: true,
-      focusOnSelect: true,
-      responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-    });
-  });
+$('.slider-for').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({  
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  dots: false,
+  centerMode: false,
+  focusOnSelect: true
+});
+
 </script>

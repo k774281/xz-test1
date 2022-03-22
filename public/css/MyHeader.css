@@ -1,5 +1,6 @@
 #menu-control{
     position: absolute;
+    opacity: 0;
 }
 .mask{    
     width: 100%;
@@ -27,12 +28,9 @@
     border: none;
 }
 .header{
-    height: 50px;
-    background-color: #fff;
     position: relative;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     z-index: 2;
 }
 .header #login{
@@ -44,17 +42,19 @@
     border: none;
 }
 .header .logo{
+    position: absolute;
+    top: 5px;
+    right: 0;
     width: 60px;
     text-align: center;
 }
 .header .fab{
     font-size: 36px;
-    color: #2D46B9;
+    color: #fff;
 }
 .header .menu-btn{
     width: 40px;
     height: 40px;
-    background-color: #fff;
     position: absolute;
     top: 5px;
     left: 10px;
@@ -69,59 +69,33 @@
 .header .menu-btn::before{
     content: "";
     position: absolute;
-    width: 36px;
-    height: 2px;
+    width: 30px;
+    height: 3px;
     left: 2px;
-    background-color: #595260;
+    border-radius: 5px;
+    background-color: #fff;
     top: 0;
     bottom: 0;
     margin: auto;
-    box-shadow: 0px 8px 0px #595260,
-                0px -8px 0px #595260;
+    box-shadow: 0px 8px 0px #fff,
+                0px -8px 0px #fff;
 }
-
-
-.header .search{
-    display: flex;
-    margin: 10px 10px;
-    border: 2px solid #595260;
-    border-radius: 100px;
-}
-.search input{
-    width: 80%;
-}
-.search button{
-    width: 30px;
-}
-.search input,
-.search button{
-    border: none;
-    background-color: transparent;
-    color: #2B2B2B;
-}
-.search input:focus,
-.search button:focus{
-    outline: none;
-}
-
 
 .header .nav{
-    width: 50%;
-    height: calc(100vh - 50px);
-    background-color: #EDEDED;
+    width: 100%;
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: -100%;
-    display: flex;
-    flex-direction: column;
+    opacity: 0;
+    display: block;
+    text-align: center;
     transition:  0.5s;
     z-index: 1;
-    box-shadow: 5px 5px 10px #595260;
 }
 .header .nav a{
     display: block;
     text-decoration: none;
-    color: #2B2B2B;
+    color: #fff;
     padding: 10px;
     font-weight: 500;
     position: relative;
@@ -135,6 +109,7 @@
     background-color: #595260;
 }
 #menu-control:checked ~ .header .nav{
+    opacity: 1;
     left: 0;
 }
 
@@ -145,53 +120,49 @@
     position: relative;
 }
 .header .nav ul{
-    position: absolute;
-    left: 100%;
-    top: 0;
-    width: 150px;
-    background-color: #EDEDED;
-    z-index: -2;
+    border-top: 1px solid #9e9ca0;
+    border-bottom: 1px solid #9e9ca0;
     padding: 0;
     display: none;
 }
-.header .nav:hover >a{
-    background-color: #2B2B2B;
-}
-.header .nav li:hover > ul{
-    display: block;
-}
-.header .nav li:hover{
-    background-color: #9e9ca0;
+.header .nav ul li:hover >a{
+    background-color: #c0abad7a;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media screen and (min-width: 768px){
     .menu-btn{display: none;}
-    .header{
-        align-items: center;
-    }
+    
     .header .nav{
-        position: relative;
+        position: absolute;
         top: 0;
         left: 0px;
-        width: auto;
-        height: auto;
-        flex-direction: row;        
         background-color: transparent;
-        justify-content: center;
-        box-shadow: 0px 0px 0px transparent;
-        flex-grow: 1;
+        opacity: 1;
+        display: flex;
+        justify-content: end;
     }
     .header .nav ul{
         left: 0;
         top: 48px;
         width: 150px;
+        border-bottom: none;
     }
     .header .nav a{
         border-bottom: none;
+        margin: 0 20px;
+    }
+    .header .logo{
+        left: 0;
+    }
+    .header .nav li{
+        width: 150px
+    }
+    .header .nav li:hover ul{
+        display: block;
     }
 }
 
-
+/* 
 @media screen and (min-width: 1025px){
     .menu-btn{display: none;}
     .header{
@@ -217,4 +188,6 @@
         margin: auto;
         text-align: center;
     }
-}
+} 
+
+ */

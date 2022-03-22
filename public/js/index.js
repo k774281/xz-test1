@@ -1,6 +1,8 @@
 
 $(function(){
-  $.ajax({
+  let lid=location.search.split("=")[1];
+  console.log(lid);
+  /* $.ajax({
     url:"http://localhost:3000/index",
     type:"get",
     dataType:"json",
@@ -34,5 +36,28 @@ $(function(){
       }
       document.getElementById("others").innerHTML=html;
     }
-  })
+  }) */
+  
+  if(lid!==undefined){
+    $.ajax({
+      url:"http://localhost:3000/details",
+      type:"get",
+      data:{lid},
+      datatype:"json",
+      success:function(result){
+        let {product,specs}=result;
+        let {title,subtitle,price,promise}=product;
+        $("#ptitle").html(title);
+        $("#p_sub_title").html(subtitle);
+        $("#pprice").html(price);
+        $("#ppromise").html(promise);
+        let html="";
+        for(var sp of specs){
+          html+=`<a class="btn btn-sm btn-outline-secondary ${sp.lid==lid?'active':''}" href="product_details.html?lid=${sp.lid}">${sp.spec}</a>`
+        }
+        $("#specs").html(html);
+      }
+    })
+  }
+
 });

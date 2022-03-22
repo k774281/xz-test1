@@ -47,6 +47,13 @@ const router=express.Router();
 
 router.get('/index',function(req,res){
   res.sendFile(__dirname+'../index.html');
+  var gid=req.query.gid;
+  var sql="select gd.*, gp.lg from game_detail gd inner join game_pic gp on gd.gid=gp.game_id WHERE gd.gid=?";
+
+  pool.query(sql,[gid],(err,result)=>{
+    if(err) console.log(err);
+    res.send(result);
+  });
 })
 
 module.exports=router;
