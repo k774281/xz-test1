@@ -20,7 +20,7 @@
   
 </head>
 <body>
-  <header id="my-header">
+  <!-- <header id="my-header">
     <input type="checkbox" id="menu-control">
         
 
@@ -81,18 +81,25 @@
             </li>
         </ul>
     </div>
-  </header>
+  </header> -->
 
+<section class="kittenHouse">
+  <main id="carousel"></main> 
+    <h1>Homepage Name</h1>
+    <h3>Homepage of website slogan block</h3>
+    <div class="tab-container">
+        <a href="#new-hot" class="slick-tab">本月特報</a>
+        <a href="#coming" class="slick-tab">服務項目</a>
+        <a href="#tab-discounts" class="slick-tab">優惠方案</a>
+        <a href="#tab-appointment" class="slick-tab">立即預約</a>
+        <a href="#footer" class="slick-tab">聯絡我們</a>
+        <span class="tab-slider"></span>
+    </div>
+</section>
 
+<!-- <main id="carousel"></main>-->
 
-
-
-
-
-
-<main id="carousel"></main>
-
-  <section class="first-group">
+  <section class="first-group" id="new-hot">
     <div class="background-img new-hot">
       <div class="container">
         <div class="finished">
@@ -133,7 +140,7 @@
         </div>
       </div>        
     </div>
-    <div class="bk-coming">
+    <div class="bk-coming" id="coming">
       <div class="txt">
         <h1>現已推出和即將上市的精彩遊戲</h1>
       </div>
@@ -209,7 +216,7 @@
     </div>
   </section>
 
-  <section class="second-group">
+  <section class="second-group" id="tab-discounts">
     <div class="new-discount-wrap">
       <div class="container">
         <h1>全新優惠就在SP STORE</h1>
@@ -221,7 +228,7 @@
       </div>
     </div>
 
-    <div class="discount-wrap">
+    <div class="discount-wrap" id="tab-appointment">
       <div class="container">
         <h1>本月優惠別錯過!</h1>
         <div class="txt">
@@ -247,7 +254,7 @@
 
 
 
-  <footer id="footer">
+  <footer id="footer" >
     <div class="main_footer">
       <div class="container">
           <div class="footer_item">
@@ -289,36 +296,107 @@
   <script src="js/carousel.js"></script>
   <script src="js/footer.js"></script>
 
-<script>
-    $(".menu-btn").click(function(){
+ <script>
+    $(".menu-icon").click(function(){
         $(".mask").toggle();
     })
 
-</script>
+</script> 
 
-  <script>
-
-
-setInterval(function(){
-  $(".finished").addClass("finishedload")
-},2000)
-
-  </script>
 
 
 <script>
-let nav = document.querySelector('.nav');
-let dataClick = nav.querySelectorAll('a[data-click]');
-$(dataClick).on("click",function(){
-  $(this).parent().children('ul').slideToggle();
+let menu = document.querySelector('.menu-icon');
+$(menu).on("click",function(){
+  $(this).toggleClass('nav-active');
 });
-
-
-
-
-
-
 </script>
+<script>
+  class StickyNavigation {
+constructor() {
+  this.currentId = null;
+  this.currentTab = null;
+  this.tabContainerHeight = 70;
+  let self = this;
+  $(".slick-tab").click(function () {
+    self.onTabClick(event, $(this));
+  });
+  $(window).scroll(() => {
+    this.onScroll();
+  });
+  $(window).resize(() => {
+    this.onResize();
+  });
+}
+
+onTabClick(event, element) {
+  event.preventDefault();
+  let scrollTop =
+    $(element.attr("href")).offset().top - this.tabContainerHeight + 1;
+  $("html, body").animate({ scrollTop: scrollTop }, 600);
+}
+
+onScroll() {
+  this.checkTabContainerPosition();
+  this.findCurrentTabSelector();
+}
+
+onResize() {
+  if (this.currentId) {
+    this.setSliderCss();
+  }
+}
+
+checkTabContainerPosition() {
+  let offset =
+    $(".kittenHouse").offset().top +
+    $(".kittenHouse").height() -
+    this.tabContainerHeight;
+  if ($(window).scrollTop() > offset) {
+    $(".tab-container").addClass("tab-container-top");
+  } else {
+    $(".tab-container").removeClass("tab-container-top");
+  }
+}
+
+findCurrentTabSelector(element) {
+  let newCurrentId;
+  let newCurrentTab;
+  let self = this;
+  $(".slick-tab").each(function () {
+    let id = $(this).attr("href");
+    let offsetTop = $(id).offset().top - self.tabContainerHeight;
+    let offsetBottom =
+      $(id).offset().top + $(id).height() - self.tabContainerHeight;
+    if (
+      $(window).scrollTop() > offsetTop &&
+      $(window).scrollTop() < offsetBottom
+    ) {
+      newCurrentId = id;
+      newCurrentTab = $(this);
+    }
+  });
+  if (this.currentId != newCurrentId || this.currentId === null) {
+        this.currentId = newCurrentId;
+        this.currentTab = newCurrentTab;
+        this.setSliderCss();
+      }
+    }
+
+setSliderCss() {
+      let width = 0;
+      let left = 0;
+      if (this.currentTab) {
+        width = this.currentTab.css("width");
+        left = this.currentTab.offset().left;
+      }
+      $(".tab-slider").css("width", width);
+      $(".tab-slider").css("left", left);
+    }
+  }
+
+  new StickyNavigation();
+  </script>
 
 </body>
 </html>

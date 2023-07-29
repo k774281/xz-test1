@@ -17,7 +17,6 @@ html{
   background: transparent;  
 }
 body{
-  background:linear-gradient(-50deg,#950101 -100% ,#040303);
   background-attachment:fixed;
   height:100vh;
 }

@@ -1,3 +1,4 @@
+
 #menu-control{
     position: absolute;
     opacity: 0;
@@ -162,32 +163,49 @@
     }
 }
 
-/* 
-@media screen and (min-width: 1025px){
-    .menu-btn{display: none;}
-    .header{
-        align-items: center;
-    }
-    .header .nav{
-        position: relative;
-        top: 0;
-        left: 0;
-        width: auto;
-        height: auto;
-        flex-direction: row;        
-        background-color: transparent;
-        justify-content: space-around;
-        flex-grow: 1;
-        box-shadow: 5px 5px 10px transparent;
-    }
-    .header .nav ul{
-        left: -38px;
-        top: 50px;
-    }
-    .header .nav a{
-        margin: auto;
-        text-align: center;
-    }
-} 
 
- */
+.kittenHouse,
+.kittenContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #eee;
+    text-align: center;
+    padding: 0 2em;
+}
+.tab-container{
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+}
+.tab-container-top{
+    position: fixed;
+    top:0;
+}
+.slick-tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    transition: all 0.5 ease;
+    font-size: 20px;
+    background-color: #faf6f6;
+}
+.tab-slider{
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    background-color: #fccc31;
+    transition: left 0.3 ease;        
+}
